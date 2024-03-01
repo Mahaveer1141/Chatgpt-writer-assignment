@@ -68,12 +68,6 @@ const MessageModalOverlay: React.FC = () => {
   })
 
   useEffect(() => {
-    const showModal = JSON.parse(sessionStorage.getItem("showModal")) || false
-    console.log(showModal)
-    setShowModal(showModal)
-  }, [])
-
-  useEffect(() => {
     modalRef?.current?.addEventListener("click", () => {
       resetValues()
     })
